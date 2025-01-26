@@ -1,0 +1,102 @@
+.input {
+    width: 100%;
+    padding: 14px 20px;
+    margin: 8px;
+    display: inline-block;
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+
+.input::placeholder {
+    color: black;
+}
+
+.button {
+    background-color: white;
+    padding: 14px 20px;
+    margin: 8px;
+    border: 1px solid black;
+    cursor: pointer;
+    width: 100%;
+}
+
+.layout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 20px;
+}
+
+.building {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.lift {
+    width: 80px;
+    border: 1px solid black;
+    margin: 10px;
+}
+
+.floor {
+    display: flex;
+    padding: 10px;
+}
+
+.rooms {
+    display: grid;
+    gap: 8px;
+    grid-template-columns: repeat(10, 50px);
+}
+
+.floor:nth-child(1) .rooms {
+    grid-template-columns: repeat(7, 50px);
+}
+
+.room {
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    border: 1px solid black;
+    
+}
+
+.selected {
+    background-color: green;
+}
+
+.booked {
+    background-color: grey;
+}
+
+.room-booked {
+    background-color: grey;
+}
+
+.room.booked-by-user {
+    background-color: green;
+}
+
+.room.selectd {
+    border: 2px solid blue;
+}
+
+.error-message {
+    color: red;
+    font-size: 18px;
+    margin-top: 10px;
+    text-align: center;
+    padding: 10px;
+    border: 1px solid red;
+    background-color: rgba(255, 0, 0, 0.1);
+    border-radius: 5px;
+    width: 100%;
+    max-width: 680px;
+    height: 40px;
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
+}
