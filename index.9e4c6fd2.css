@@ -1,0 +1,157 @@
+:root {
+  --primary-color: #3b82f6;
+  --primary-hover: #2563eb;
+  --secondary-color: #f3f4f6;
+  --danger-color: #ef4444;
+  --success-color: #22c55e;
+  --border-color: #e5e7eb;
+}
+
+.hotel-container {
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.hotel-card {
+  background-color: #fff;
+  border-radius: .5rem;
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px -1px #0000001a;
+}
+
+.controls-container {
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+}
+
+.room-input {
+  border: 1px solid var(--border-color);
+  border-radius: .375rem;
+  width: 8rem;
+  padding: .5rem .75rem;
+}
+
+.btn {
+  border-radius: .375rem;
+  padding: .5rem 1rem;
+  font-weight: 500;
+  transition: all .2s;
+}
+
+.building {
+  justify-content: center;
+  padding: 20px;
+  display: flex;
+}
+
+.lift {
+  border: 1px solid #000;
+  border-radius: .375rem;
+  width: 60px;
+  margin: 10px;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-hover);
+}
+
+.btn-secondary {
+  border: 1px solid var(--border-color);
+  background-color: #fff;
+}
+
+.btn-secondary:hover {
+  background-color: var(--secondary-color);
+}
+
+.error-message {
+  color: #dc2626;
+  background-color: #fee2e2;
+  border: 1px solid #fca5a5;
+  border-radius: .375rem;
+  margin-bottom: 1rem;
+  padding: .75rem 1rem;
+}
+
+.success-message {
+  color: #2563eb;
+  background-color: #dbeafe;
+  border: 1px solid #93c5fd;
+  border-radius: .375rem;
+  margin-bottom: 1rem;
+  padding: .75rem 1rem;
+}
+
+.floors-container {
+  flex-direction: column;
+  gap: 1.5rem;
+  display: flex;
+}
+
+.floor-card {
+  border-radius: .375rem;
+  padding: 5px;
+}
+
+.rooms-grid {
+  grid-template-columns: repeat(10, 1fr);
+  gap: .5rem;
+  display: grid;
+}
+
+.room-cell {
+  text-align: center;
+  border: 1px solid var(--border-color);
+  border-radius: .25rem;
+  padding: 20px;
+  font-size: 5px;
+  transition: all .2s;
+}
+
+.room-available {
+  background-color: #fff;
+  border-color: #000;
+}
+
+.room-occupied {
+  background-color: #fee2e2;
+  border-color: #fca5a5;
+}
+
+.room-random {
+  background-color: gray;
+  border-color: #666;
+}
+
+.room-selected {
+  outline: 2px solid var(--primary-color);
+  outline-offset: -2px;
+}
+
+@media (width <= 640px) {
+  .hotel-container {
+    padding: 1rem;
+  }
+
+  .controls-container {
+    flex-direction: column;
+  }
+
+  .room-input {
+    width: 100%;
+  }
+
+  .rooms-grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+/*# sourceMappingURL=index.9e4c6fd2.css.map */
