@@ -1,30 +1,46 @@
-.input {
-    width: 100%;
-    padding: 14px 20px;
-    margin: 8px;
-    display: inline-block;
-    border: 1px solid black;
-    box-sizing: border-box;
+/* Base styles */
+:root {
+    --primary-color: #3b82f6;
+    --primary-hover: #2563eb;
+    --secondary-color: #f3f4f6;
+    --danger-color: #ef4444;
+    --success-color: #22c55e;
+    --border-color: #e5e7eb;
 }
 
-.input::placeholder {
-    color: black;
+.hotel-container {
+    padding: 2rem;
+    max-width: 72rem;
+    margin: 0 auto;
 }
 
-.button {
+.hotel-card {
     background-color: white;
-    padding: 14px 20px;
-    margin: 8px;
-    border: 1px solid black;
-    cursor: pointer;
-    width: 100%;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+    padding: 1.5rem;
+    margin-bottom: 2rem;
 }
 
-.layout {
+.controls-container {
     display: flex;
     justify-content: center;
-    align-items: center;
-    padding: 0px 20px;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.room-input {
+    border: 1px solid var(--border-color);
+    border-radius: 0.375rem;
+    padding: 0.5rem 0.75rem;
+    width: 8rem;
+}
+
+.btn {
+    padding: 0.5rem 1rem;
+    border-radius: 0.375rem;
+    font-weight: 500;
+    transition: all 0.2s;
 }
 
 .building {
@@ -34,69 +50,109 @@
 }
 
 .lift {
-    width: 80px;
+    width: 60px;
     border: 1px solid black;
     margin: 10px;
+    border-radius: 0.375rem;
 }
 
-.floor {
-    display: flex;
-    padding: 10px;
+.btn-primary {
+    background-color: var(--primary-color);
+    color: white;
 }
 
-.rooms {
-    display: grid;
-    gap: 8px;
-    grid-template-columns: repeat(10, 50px);
+.btn-primary:hover {
+    background-color: var(--primary-hover);
 }
 
-.floor:nth-child(1) .rooms {
-    grid-template-columns: repeat(7, 50px);
+.btn-secondary {
+    border: 1px solid var(--border-color);
+    background-color: white;
 }
 
-.room {
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 14px;
-    border: 1px solid black;
-    
-}
-
-.selected {
-    background-color: green;
-}
-
-.booked {
-    background-color: grey;
-}
-
-.room-booked {
-    background-color: grey;
-}
-
-.room.booked-by-user {
-    background-color: green;
-}
-
-.room.selectd {
-    border: 2px solid blue;
+.btn-secondary:hover {
+    background-color: var(--secondary-color);
 }
 
 .error-message {
-    color: red;
-    font-size: 18px;
-    margin-top: 10px;
+    background-color: #fee2e2;
+    border: 1px solid #fca5a5;
+    color: #dc2626;
+    padding: 0.75rem 1rem;
+    border-radius: 0.375rem;
+    margin-bottom: 1rem;
+}
+
+.success-message {
+    background-color: #dbeafe;
+    border: 1px solid #93c5fd;
+    color: #2563eb;
+    padding: 0.75rem 1rem;
+    border-radius: 0.375rem;
+    margin-bottom: 1rem;
+}
+
+.floors-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.floor-card {
+    border-radius: 0.375rem;
+    padding: 5px;
+}
+
+.rooms-grid {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 0.5rem;
+}
+
+.room-cell {
+    padding: 20px;
     text-align: center;
-    padding: 10px;
-    border: 1px solid red;
-    background-color: rgba(255, 0, 0, 0.1);
-    border-radius: 5px;
-    width: 100%;
-    max-width: 680px;
-    height: 40px;
-    box-sizing: border-box;
-    margin-left: auto;
-    margin-right: auto;
+    font-size: 5px;
+    border-radius: 0.25rem;
+    border: 1px solid var(--border-color);
+    transition: all 0.2s;
+}
+
+.room-available {
+    background-color: white;
+    border-color: black;
+}
+
+.room-occupied {
+    background-color: #fee2e2;
+    border-color: #fca5a5;
+}
+
+.room-random {
+    background-color: #808080;
+    border-color: #666666;
+}
+
+.room-selected {
+    outline: 2px solid var(--primary-color);
+    outline-offset: -2px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+    .hotel-container {
+        padding: 1rem;
+    }
+    
+    .controls-container {
+        flex-direction: column;
+    }
+    
+    .room-input {
+        width: 100%;
+    }
+    
+    .rooms-grid {
+        grid-template-columns: repeat(5, 1fr);
+    }
 }
